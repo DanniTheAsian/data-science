@@ -1,8 +1,6 @@
 # import af libraries
 import numpy as np 
 from sympy import Matrix, pprint
-import sys
-
 
 def main():
 
@@ -54,7 +52,6 @@ def creating_matrix(rows: int, cols: int):
         for j in range(cols):
             matrix_zeros[i, j] = int(input(f"Enter element at position ({i+1},{j+1}): "))
 
-    # Print the matrix
     return matrix_zeros
 
 
