@@ -4,7 +4,7 @@ from sympy import Matrix, pprint
 
 def main():
 
-    print("=== Augumented Matrix ===\n")
+    print("=== Augumented Matrix ===\n") 
 
     # prompting the user
     rows = int(input("Enter number of rows: m = "))
