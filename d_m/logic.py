@@ -22,7 +22,7 @@ def main():
 				print(p,a)
 			main()
 		case 2:
-			print("You have chosen conjunction (AND)")
+			print("You have chosen conjunction (AND).")
 			print("p    q    p and q")
 			for p in [True, False]:
 				for q in [True, False]:
