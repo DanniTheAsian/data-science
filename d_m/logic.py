@@ -3,16 +3,19 @@
 def main():
 
 	print("""
-	   		1. negation (NOT)
-			2. conjunction (AND)
-	   		3. disjunction (OR)
-	   		4. exclusive OR
+	   		1. Negation (NOT)
+			2. Conjunction (AND)
+	   		3. Disjunction (OR)
+	   		4. Implicaton
+	   		5. Bi-implication
+	   		6. Exclusive OR
 		""")
 	
 	lo = int(input("choose logical operator: "))
 
 	match lo:
 		case 1:
+			print("You have chosen negation")
 			print("p	a")
 			for p in [True, False]:
 				a = negation(p)
@@ -35,8 +38,24 @@ def main():
 					a = disjunction(p,q)
 					print(p,q,a)
 			main()
-			
+		
 		case 4:
+			print("You have chosen implication")
+			print("p	q	a")
+			for p in [True, False]:
+				for q in [True, False]:
+					a = implication(p,q)
+					print(p,q,a)
+		
+		case 5:
+			print("You have chosen bi-implication")
+			print("p	q	a")
+			for p in [True, False]:
+				for q in [True, False]:
+					a = bi_implication(p, q)
+					print(p, q, a)
+
+		case 6:
 			print("p	q	a")
 			for p in [True, False]:
 				for q in [True, False]:	
@@ -53,8 +72,14 @@ def conjunction(p, q):
 def negation(p):
 	return not p
 
+def implication(p,q):
+	return not p or q
+
+def bi_implication(p,q):
+	return (not p or q) and (not q or p)
+
 def exclusive_disjunction(p, q):
 	return (p and not q) or (not p and q)
 
-if __name__=="__main__":
+if __name__== "__main__":
 	main()
