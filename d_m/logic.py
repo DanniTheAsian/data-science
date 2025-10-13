@@ -12,7 +12,7 @@ def main():
 	   		7. Exit the program
 		""")
 	
-	lo = int(input("choose logical operator: "))
+	lo = int(input("choose logical operator by typing a number between 1 and 7: "))
 
 	match lo:
 		case 1:
@@ -63,7 +63,6 @@ def main():
 				for q in [True, False]:	
 					a = exclusive_disjunction(p, q)
 					print(p, q, a)
-			
 
 		case 7:
 			sys.exit()
