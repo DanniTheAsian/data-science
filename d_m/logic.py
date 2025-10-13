@@ -1,4 +1,4 @@
-
+import sys
 
 def main():
 
@@ -9,6 +9,7 @@ def main():
 	   		4. Implicaton
 	   		5. Bi-implication
 	   		6. Exclusive OR
+	   		7. Exit the program
 		""")
 	
 	lo = int(input("choose logical operator: "))
@@ -20,7 +21,7 @@ def main():
 			for p in [True, False]:
 				a = negation(p)
 				print(p,a)
-			main()
+	
 		case 2:
 			print("You have chosen conjunction (AND).")
 			print("p    q    p and q")
@@ -28,7 +29,7 @@ def main():
 				for q in [True, False]:
 					a = conjunction(p,q)
 					print(p,q,a)
-			main()
+
 
 		case 3:
 			print("You have chosen disjunction (OR)")
@@ -37,7 +38,6 @@ def main():
 				for q in [True, False]:
 					a = disjunction(p,q)
 					print(p,q,a)
-			main()
 		
 		case 4:
 			print("You have chosen implication")
@@ -46,6 +46,7 @@ def main():
 				for q in [True, False]:
 					a = implication(p,q)
 					print(p,q,a)
+
 		
 		case 5:
 			print("You have chosen bi-implication")
@@ -54,6 +55,7 @@ def main():
 				for q in [True, False]:
 					a = bi_implication(p, q)
 					print(p, q, a)
+	
 
 		case 6:
 			print("p	q	a")
@@ -61,7 +63,12 @@ def main():
 				for q in [True, False]:	
 					a = exclusive_disjunction(p, q)
 					print(p, q, a)
+			
 
+		case 7:
+			sys.exit()
+		
+	main()
 
 def disjunction(p, q):
 	return p or q
