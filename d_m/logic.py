@@ -2,7 +2,7 @@
 
 def main():
 
-	print("""
+	print(""" 
 	   		1. Negation (NOT)
 			2. Conjunction (AND)
 	   		3. Disjunction (OR)
@@ -15,7 +15,7 @@ def main():
 
 	match lo:
 		case 1:
-			print("You have chosen negation")
+			print("You have chosen negation.")
 			print("p	a")
 			for p in [True, False]:
 				a = negation(p)
