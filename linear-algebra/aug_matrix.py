@@ -14,6 +14,8 @@ def main():
             match choice:
                 case 1:
                     handle_matrix_case_one()
+                case 2:
+                    print("under construction...🛠️")
 
                 case 7:
                     sys.exit()
@@ -26,7 +28,8 @@ def commands():
     """ Displays possible commands for the user """
 
     print("""\nMenu - You have the following options:\n
-          1. Find solutions for a mxn augumented matrix by REF and RREF.
+          1. Solve a system of linear equations (REF and RREF) using an augmented matrix
+          2. Perform operations on a coefficient matrix (Transpose, Determinant, Rank)
           7. Exit the program.
           """)
     return None
