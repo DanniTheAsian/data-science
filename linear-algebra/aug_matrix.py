@@ -9,7 +9,7 @@ def main():
     while True:
         try:
             commands()
-            choice = int(input("Choose a number: "))
+            choice = int(input("Choose a number:  "))
 
             match choice:
                 case 1:
